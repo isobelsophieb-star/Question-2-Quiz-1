@@ -104,6 +104,65 @@ At 375px (Mobile):
 Navigation stacked vertically and centered
 
 Hero stacked vertically
+Name: Isobel  
+Tools used: ChatGPT, Colab, Browser  
+
+---
+
+Q1:
+- Key finding (2-4 sentences):
+There is a strong positive relationship between study hours and exam scores. The trendline slope shows that each additional study hour increases scores by approximately 4 points. Sleep hours showed a weaker pattern. Study time appears to be the stronger predictor of performance.
+
+- Outlier:
+Student A is an outlier because despite sleeping 8 hours, their exam score was significantly lower than other students with similar sleep levels.
+
+---
+
+Q2:
+- What was broken:
+The hero section did not stack vertically on mobile.
+
+- What I changed:
+I added `flex-direction: column;` inside the mobile media query.
+
+---
+
+Q3:
+
+Prompt 1 (plan, no code):
+[PASTE your planning prompt]
+
+Response snippet:
+Use flexbox for layout and media queries at 900px and 600px breakpoints.
+
+Accepted:
+- Using flexbox for header and hero
+- Using 900px and 600px breakpoints
+
+Rejected:
+- Hamburger navigation (not required and would require JavaScript)
+
+Prompt 2 (debug):
+[PASTE your debug prompt]
+
+Response snippet:
+Add `flex-direction: column;` inside the mobile media query.
+
+What I verified:
+- viewport sizes tested:
+375px, 768px, 1200px
+
+- what I checked visually:
+Header alignment, hero stacking, grid columns, and overflow behavior.
+
+---
+
+Q4:
+- Chart caption:
+This chart shows a positive relationship between study hours and exam scores. Students who study more generally achieve higher scores.
+
+- Decision based on chart:
+Based on this data, I would encourage increasing consistent study hours to improve academic outcomes.
 
 Grid displayed 1 column
 
