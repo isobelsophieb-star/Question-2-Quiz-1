@@ -51,3 +51,60 @@ When resizing the browser to mobile width (under 600px), the hero section did no
     text-align: center;
   }
 }
+Most Important Part of the AI Response
+
+The AI explained that changing text-align does not affect the layout direction of flex items.
+It stated that I must explicitly change the flex direction inside the mobile media query by adding:
+
+flex-direction: column;
+
+What I Changed Afterward
+
+I updated my CSS to:
+
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+After this change, the hero section correctly stacked vertically on mobile screens.
+3. Verification List
+Viewport Sizes Tested
+
+375px (Mobile)
+
+768px (Tablet)
+
+1200px (Desktop)
+
+What I Checked Visually
+
+At 1200px (Desktop):
+
+Logo aligned left and navigation aligned right
+
+Hero displayed in two columns
+
+Grid displayed 4 columns
+
+No horizontal overflow
+
+At 768px (Tablet):
+
+Grid switched to 2 columns
+
+Hero remained in two columns
+
+Header remained horizontal
+
+At 375px (Mobile):
+
+Navigation stacked vertically and centered
+
+Hero stacked vertically
+
+Grid displayed 1 column
+
+No layout overflow or spacing issues
